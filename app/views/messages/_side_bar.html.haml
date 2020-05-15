@@ -1,1 +1,18 @@
-<サイドバー>
+.side-bar
+  .top
+    .top__items
+      .top__items__user
+        =current_user.name
+      .top__items__icon<>
+        = link_to new_group_path, class: "top__items__icon__left" do
+          = icon('fa','edit', class: 'top__items__icon--color')
+        = link_to edit_user_path(current_user), class: "top__items__icon__right" do
+          = icon('fa', 'cog' ,class: 'top__items__icon--color')
+  .list
+    - current_user.groups.each do |group|
+      .list__group
+        = link_to "#" do
+          .list__group__title<
+            = group.name
+          .list__group__message<
+            メッセージはまだありません
