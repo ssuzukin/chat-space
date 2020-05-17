@@ -1,1 +1,24 @@
-<チャット画面>
+.chat-main
+  .group-info
+    .group-info__left
+      %p.group-info__left__title<
+        = @group.name
+      %ul.group-info__left__member
+        Member :&nbsp
+        - @groups.each do |group|
+          %li.group-info__left__member--list
+            = group.name
+    .group-info__right
+      = link_to edit_group_path(@group.id) do
+        Edit
+  .contents
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      .form__new
+        .form__new__input
+          = f.text_field :text, class: 'form__new__input__message', placeholder: "input a message"
+          = f.label :image, class: 'form__new__input__picture' do
+            = icon('far', 'image')
+            = f.file_field :image, class: 'form__new__input__picture--file'
+        = f.submit 'Send', class: 'form__new__btn'

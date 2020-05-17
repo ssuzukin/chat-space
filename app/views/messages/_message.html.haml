@@ -1,0 +1,12 @@
+.contents__item
+  .contents__item__top
+    %p.contents__item__top__user<
+      = message.user.name
+    %p.contents__item__top__date<
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .contents__item__bottom
+    - if message.text.present?
+      %p.contents__item__bottom__message
+        = message.text
+    .contents__item__picture
+      = image_tag message.image, class: 'contents__item__picture' if message.image.present?
