@@ -11,7 +11,7 @@
   .list
     - current_user.groups.each do |group|
       .list__group
-        = link_to "#" do
+        = link_to group_messages_path(group), class: 'list__group--under_bar' do
           .list__group__title<
             = group.name
           .list__group__message<

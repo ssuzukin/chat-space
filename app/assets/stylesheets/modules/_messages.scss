@@ -38,7 +38,6 @@
             color: $white;
           }
         }
-
       }
     }
     .list {
@@ -47,6 +46,9 @@
       padding: 20px;
       &__group {
         padding-bottom: 40px;
+        &--under_bar {
+          text-decoration: none;
+        }
         &__title {
           font-size: 15px;
           color: $white;
@@ -56,9 +58,6 @@
           font-size: 11px;
           color: $white;
         }
-      }
-      &--under_bar {
-        text-decoration: none;
       }
     }
   }
@@ -120,12 +119,14 @@
             margin-left: 10px;
           }
         }
-        &__message {
-          margin-top: 10px;
-          color: #434a54;
-          font-size: 14px;
-        }
-        &__picture {
+        &__bottom {
+          &__message {
+            margin-top: 10px;
+            color: #434a54;
+            font-size: 14px;
+          }
+          &__picture {
+          }
         }
       }
     }
