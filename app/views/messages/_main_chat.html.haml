@@ -2,9 +2,12 @@
   .group-info
     .group-info__left
       %p.group-info__left__title<
-        タイトル2
-      %p.group-info__left__member<
-        Member : ssssss
+        = @group.name
+      %ul.group-info__left__member
+        Member :&nbsp
+        - @groups.each do |group|
+          %li.group-info__left__member--list
+            = group.name
     .group-info__right
       = link_to "#" do
         Edit

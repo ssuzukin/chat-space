@@ -81,6 +81,11 @@
           margin-top: 15px;
           color: #999999;
           font-size: 12px;
+          display: flex;
+          justify-content: space-around;
+          &--list {
+            margin-right: 5px;
+          }
         }
       }
       &__right {
