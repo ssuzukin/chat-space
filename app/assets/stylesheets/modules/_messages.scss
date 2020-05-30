@@ -44,6 +44,7 @@
       height: calc(100vh - 100px);
       background-color: #2f3e51;
       padding: 20px;
+      overflow: scroll;
       &__group {
         padding-bottom: 40px;
         &--under_bar {
@@ -109,6 +110,7 @@
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
       padding: 35px 40px 0;
+      overflow: scroll;
       &__item {
         padding-bottom: 46px;
         &__top {
